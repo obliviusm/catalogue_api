@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_152521) do
+ActiveRecord::Schema.define(version: 2018_11_11_173230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,4 +35,17 @@ ActiveRecord::Schema.define(version: 2018_11_11_152521) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
+  create_table "items", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.string "name", null: false
+    t.decimal "price", precision: 8, scale: 2, default: "0.0", null: false
+    t.text "description"
+    t.string "slug", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["slug"], name: "index_items_on_slug", unique: true
+  end
+
+  add_foreign_key "items", "categories"
 end
