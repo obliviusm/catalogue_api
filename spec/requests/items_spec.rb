@@ -13,9 +13,14 @@ describe "items' requests" do
       expect(response).to have_http_status 200
     end
 
+    it 'returns pagination information' do
+      expect(response.headers['Total']).to eq('6')
+      expect(response.headers['Per-Page']).to eq('5')
+    end
+
     it 'returns categories' do
       body = JSON.parse(response.body)
-      expect(body['items'].size).to eq(6)
+      expect(body['items'].size).to eq(5) # due to pagination
       expect(body['items'][0]['id']).to eq('gold-table')
       expect(body['items'][0]['name']).to eq('Gold Table')
     end
