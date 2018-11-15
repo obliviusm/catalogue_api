@@ -1,3 +1,5 @@
+Category.destroy_all
+
 20.times do
   category = Category.create(name: Faker::Commerce.department)
   redo unless category.valid?
