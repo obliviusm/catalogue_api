@@ -14,3 +14,7 @@ API is available here [https://catalogue-api.herokuapp.com/v1](https://catalogue
 ### Test
 
 `rspec`
+
+### API documentation
+
+Information about endpoints is here [https://catalogue-api.herokuapp.com/doc](https://catalogue-api.herokuapp.com/doc)

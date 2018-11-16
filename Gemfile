@@ -32,7 +32,7 @@ gem 'rack-cors'
 gem 'will_paginate'
 gem 'api-pagination'
 gem 'faker'
-
+gem 'apipie-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

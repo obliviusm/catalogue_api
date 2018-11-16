@@ -1,0 +1,146 @@
+  <h4><a href='#categories'>Categories</a></h4>
+  <ul>
+      <li><a href='#categories-index'>index</a></li>
+  </ul>
+  <h4><a href='#items'>Items</a></h4>
+  <ul>
+      <li><a href='#items-index'>index</a></li>
+      <li><a href='#items-show'>show</a></li>
+  </ul>
+
+
+
+  <hr/>
+
+  <div>
+    <h2 id="categories">
+      <a href='#categories'>Categories</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="categories-index">
+      <a href='#categories'>Categories</a> / <a href='#categories-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /v1/categories
+            <br>
+            <small>Show list of all categories</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="items">
+      <a href='#items'>Items</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="items-index">
+      <a href='#items'>Items</a> / <a href='#items-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /v1/categories/:category_id/items
+            <br>
+            <small>Show list of items for category</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>category_id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Category ID</p>
+
+    </li>
+    
+    <li>
+      <strong>page </strong>:
+      <small>
+        optional
+        
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+<p>Page</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="items-show">
+      <a href='#items'>Items</a> / <a href='#items-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /v1/items/:id
+            <br>
+            <small>Show item details</small>
+          </h4>
+      </div>
+
+      <div>
+        
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Item ID</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
