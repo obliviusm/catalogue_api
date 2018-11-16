@@ -1,24 +1,16 @@
-# README
+# Catalogue API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API is available here [https://catalogue-api.herokuapp.com/v1](https://catalogue-api.herokuapp.com/v1)
 
-Things you may want to cover:
+### Install
 
-* Ruby version
+1. `bundle install`
+2. `rake db:create db:migrate db:seed`
 
-* System dependencies
+### Run
 
-* Configuration
+`rails s -p 4000`
 
-* Database creation
+### Test
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rspec`

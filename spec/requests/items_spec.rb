@@ -4,7 +4,7 @@ describe "items' requests" do
   context 'GET /v1/categories/:category_id/items' do
     let!(:category) { create(:category, name: 'Furniture') }
     let!(:item) { create(:item, name: 'Gold Table', category: category) }
-    let!(:category_items) { create_list(:item, 5, category: category) }
+    let!(:category_items) { create_list(:item, 9, category: category) }
     let!(:other_items) { create_list(:item, 10) }
 
     before { get '/v1/categories/furniture/items' }
@@ -14,13 +14,13 @@ describe "items' requests" do
     end
 
     it 'returns pagination information' do
-      expect(response.headers['Total']).to eq('6')
-      expect(response.headers['Per-Page']).to eq('5')
+      expect(response.headers['Total']).to eq('10')
+      expect(response.headers['Per-Page']).to eq('8')
     end
 
     it 'returns categories' do
       body = JSON.parse(response.body)
-      expect(body['items'].size).to eq(5) # due to pagination
+      expect(body['items'].size).to eq(8) # due to pagination
       expect(body['items'][0]['id']).to eq('gold-table')
       expect(body['items'][0]['name']).to eq('Gold Table')
     end
