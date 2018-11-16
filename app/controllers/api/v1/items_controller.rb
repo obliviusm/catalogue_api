@@ -2,7 +2,7 @@ class Api::V1::ItemsController < ApplicationController
   def index
     @items = paginate(
       Category.friendly.find(params[:category_id]).items,
-      per_page: 5
+      per_page: 8
     )
   end
 
